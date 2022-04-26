@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+
+    <nav id="navbar" class="nav__bar">
+
+        <header class="title__documentation">
+            <h1>CSS Primeros Pasos</h1>
+        </header>
+
+        <section class="nav__documentation">
+            <ul>
+                <li class="nav__item">
+                    <a href="#¿Qué_es_CSS?" class="nav-link">¿Qué es CSS?</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Sintaxis_del_CSS" class="nav-link">Sintaxis del CSS</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Agregar_css_a_un_documento" class="nav-link">Agregar CSS a un documento</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Cambiar_el_comportamiento_predeterminado_de_los_elementos" class="nav-link">Cambiar el
+                        comportamiento predeterminado de los elementos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Añadir_una_clase" class="nav-link">Añadir una clase</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Dar_formato_según_la_ubicación_en_un_documento" class="nav-link">Dar formato según la
+                        ubicación en un documento</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Dar_formato_según_el_estado" class="nav-link">Dar formato según el estado</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Combinaciones_de_selectores_y_combinadores" class="nav-link">Combinaciones de selectores y
+                        combinadores</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Selectores" class="nav-link">Selectores</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Especificidad" class="nav-link">Especificidad</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Propiedades_y_valores" class="nav-link">Propiedades y valores</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Las_funciones" class="nav-link">Las funciones</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#@rules" class="nav-link">@rules</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Abreviaturas" class="nav-link">Abreviaturas</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#Referencia" class="nav-link">Referencia</a>
+                </li>
+            </ul>
+        </section>
+
+    </nav>
+
+    <main id="main-doc" class="main__doc">
+
+        <section class="main-section" id="¿Qué_es_CSS?">
+            <header class="title__main">
+                <h2>¿Qué es CSS?</h2>
+            </header>
+
+            <article>
+                <p>
+                    CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y
+                    diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el
+                    espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades
+                    decorativas.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Sintaxis_del_CSS">
+            <header class="title__main">
+                <h2>Sintaxis del CSS</h2>
+            </header>
+
+            <article>
+                <p>
+                    El CSS es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de
+                    estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web. Por
+                    ejemplo: «Quiero que el encabezado principal de mi página se muestre en letras grandes de color
+                    rojo».
+                </p>
+
+                <p>
+                    El código siguiente muestra una regla CSS muy simple que proporcionaría el estilo descrito en el
+                    párrafo anterior:
+                </p>
+
+                <pre>
+                    <code class="language-css"> 
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> red<span class="puntuacion">;</span>
+                            <span class="propiedad">font-size</span><span class="puntuacion">:</span> 5em<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    La regla se abre con un selector. Este selecciona el elemento HTML que vamos a diseñar. En este
+                    caso, diseñaremos encabezados de nivel uno <span class="texto__destacado">(&lt;h1&gt;)</span>.
+                </p>
+
+                <p>
+                    Luego tenemos un conjunto de llaves <span class="texto__destacado">{ }</span>. Entre estas habrá una
+                    o más declaraciones, que tomarán la
+                    forma de pares de propiedad y valor. Cada par especifica cada una de las propiedades de los
+                    elementos seleccionados y el valor que queremos dar a esa propiedad.
+                </p>
+
+                <p>
+                    Antes de los dos puntos, tenemos la propiedad; y después, el valor. Las propiedades CSS
+                    admiten diferentes valores, dependiendo de qué propiedad se esté especificando. En el ejemplo
+                    anterior, tenemos la propiedad color, que puede tomar varios valores de color. También tenemos la
+                    propiedad de font-size, que puede tomar varias unidades de tamaño como valor.
+                </p>
+
+                <p>
+                    Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> red<span class="puntuacion">;</span>
+                            <span class="propiedad">font-size</span><span class="puntuacion">:</span> 5em<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                        
+                        <span class="selector">p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> black<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Agregar_css_a_un_documento">
+            <header class="title__main">
+                <h2>Agregar CSS a un documento</h2>
+            </header>
+
+            <article>
+                <p>
+                    Lo primero que se debe hacer es decirle al documento HTML que hay algunas reglas CSS que queremos
+                    que use. Hay tres formas diferentes de aplicar CSS a un documento HTML, sin embargo, por ahora,
+                    veremos la forma más habitual y útil de hacerlo: vincular el CSS desde el encabezado del documento.
+                </p>
+
+                <p>
+                    Crea un archivo en la misma carpeta que tu documento HTML y guárdalo como <span
+                        class="texto__destacado">styles.css</span>. La extensión
+                    <span class="texto__destacado">.css</span> muestra que es un archivo CSS.
+                </p>
+
+                <p>
+                    Para vincular <span class="texto__destacado">styles.css</span> a <span
+                        class="texto__destacado">index.html</span>, añade la siguiente línea en algún lugar dentro del
+                    <span class="texto__destacado">&lt;head&gt;</span> del documento HTML:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="puntuacion">&lt;</span><span class="selector">head</span><span class="puntuacion">&gt;</span>
+                            <span class="puntuacion">&lt;</span><span class="propiedad">link rel</span><span class="puntuacion">="</span>stylesheet<span class="puntuacion">"</span> <span class="propiedad">href</span><span class="puntuacion">="</span>styles.css<span class="puntuacion">"</span><span class="puntuacion">&gt;</span>
+                        <span class="puntuacion">&lt;/</span><span class="selector">head</span><span class="puntuacion">&gt;</span>                        
+                    </code>
+                </pre>
+
+                <p>
+                    Este elemento <span class="texto__destacado">&lt;link&gt;</span> le dice al navegador que hay una
+                    hoja de estilo con el atributo <span class="texto__destacado">rel</span> y la
+                    ubicación de esa hoja de estilo como el valor del atributo <span
+                        class="texto__destacado">href</span>. Puedes probar si el CSS funciona
+                    añadiendo una regla a <span class="texto__destacado">styles.css</span>. Usando el editor de código,
+                    añade lo siguiente al archivo CSS:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> red<span class="puntuacion">;</span>                            
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Guarda los archivos HTML y CSS antes de volver a cargar la página en un navegador web. Ahora el
+                    título de nivel uno de la parte superior del documento debería ser rojo. Si esto sucede,
+                    ¡felicidades!: has aplicado correctamente un poco de CSS a un documento HTML. Si no lo hace,
+                    verifica que hayas escrito todo correctamente.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Cambiar_el_comportamiento_predeterminado_de_los_elementos">
+            <header class="title__main">
+                <h2>Cambiar el comportamiento predeterminado de los elementos</h2>
+            </header>
+
+            <article>
+                <p>
+                    Cuando miramos un documento HTML bien marcado, incluso con algo tan simple como nuestro ejemplo,
+                    podemos ver que el navegador facilita la legibilidad de este documento HTML al añadir un estilo
+                    predeterminado. Los títulos se muestran grandes y en negrita, y la lista tiene viñetas. Esto sucede
+                    porque los navegadores tienen hojas de estilo internas que contienen estilos predeterminados, los
+                    cuales se aplican a todas las páginas por defecto. Sin ellos, todo el texto se uniría en un grupo y
+                    tendríamos que darle formato desde cero. Todos los navegadores modernos muestran el contenido HTML
+                    por defecto de la misma manera.
+                </p>
+
+                <p>
+                    Sin embargo, a menudo querrás algo diferente a la elección que ha hecho el navegador. Esto se puede
+                    solucionar con el simple hecho de escoger el elemento HTML que deseas cambiar y utilizar una regla
+                    CSS para cambiar su apariencia. Un buen ejemplo es <span class="texto__destacado">&lt;ul&gt;</span>,
+                    que muestra una lista desordenada. Tiene viñetas y, si decidimos que no las queremos, podemos
+                    eliminarlas de este modo:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">ul</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">list-style</span><span class="puntuacion">:</span> none<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Añadir_una_clase">
+            <header class="title__main">
+                <h2>Añadir una clase</h2>
+            </header>
+
+            <article>
+                <p>
+                    Hasta ahora, hemos utilizado elementos cuyo nombre se basa en el nombre de elemento que reciben en
+                    HTML. Esto funciona siempre que se desee que todos los elementos de ese tipo tengan el mismo aspecto
+                    en el documento. La mayoría de las veces no es el caso, por lo que deberás encontrar una manera de
+                    seleccionar un subconjunto de los elementos sin que cambien los demás. La forma más común de hacer
+                    esto es añadir una clase al elemento HTML y determinarla.
+                </p>
+
+                <p>
+                    En tu documento HTML, añade al segundo elemento de la lista un atributo de clase. Debería verse así:
+                </p>
+
+                <pre>
+                    <code class="language-html">
+                        <span class="puntuacion">&lt;</span><span class="selector">ul</span><span class="puntuacion">&gt;</span>
+                            <span class="puntuacion">&lt;</span><span class="selector">li</span><span class="puntuacion">&gt;</span>
+                                <span class="puntuacion">&lt;</span><span class="selector">a</span><span class="puntuacion">&gt;</span>
+                                    <span class="texto__destacado">Link 1</span>
+                                <span class="puntuacion">&lt;/</span><span class="selector">a</span><span class="puntuacion">&gt;</span>
+                            <span class="puntuacion">&lt;/</span><span class="selector">li</span><span class="puntuacion">&gt;</span>
+                            <span class="puntuacion">&lt;</span><span class="selector">li</span><span class="puntuacion">&gt;</span>
+                                <span class="puntuacion">&lt;</span><span class="selector">a</span> <span class="propiedad">class</span><span class="puntuacion">=</span><span class="puntuacion">"</span>special<span class="puntuacion">"</span><span class="puntuacion">&gt;</span>
+                                    <span class="texto__destacado">Link 2</span>
+                                <span class="puntuacion">&lt;/</span><span class="selector">a</span><span class="puntuacion">&gt;</span>
+                            <span class="puntuacion">&lt;/</span><span class="selector">li</span><span class="puntuacion">&gt;</span>
+                        <span class="puntuacion">&lt;/</span><span class="selector">ul</span><span class="puntuacion">&gt;</span>
+                    </code>
+                </pre>
+
+                <p>
+                    En tu CSS, puedes seleccionar una clase <span class="texto__destacado">special</span> creando un
+                    selector que comience con un carácter de
+                    punto final. Añade lo siguiente a tu archivo CSS:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">.special</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">orange</span><span class="puntuacion">;
+                            <span class="propiedad">font-weight</span><span class="puntuacion">:</span> bold<span class="puntuacion">;</span>
+                            </span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Puedes aplicar la clase <span class="texto__destacado">special</span> a cualquier elemento de la
+                    página que desees que tenga el mismo aspecto que este elemento de lista. Por ejemplo, es posible que
+                    desees que el <span class="texto__destacado">&lt;span&gt;</span> del párrafo también sea naranja y
+                    en negrita.
+                </p>
+
+                <p>
+                    A veces verás reglas con un selector que enumera el selector de elementos HTML junto con la clase:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">li</span><span class="puntuacion">.</span><span class="selector">special</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">orange</span><span class="puntuacion">;</span>
+                            <span class="propiedad">font-weight</span><span class="puntuacion">:</span> bold<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Esta sintaxis significa «determina cualquier elemento li que tenga una clase special». Si hicieras
+                    esto, ya no podrías aplicar la clase a un elemento <span
+                        class="texto__destacado">&lt;span&gt;</span> u otro elemento simplemente añadiéndole la clase;
+                    tendrías que añadir ese elemento a la lista de selectores:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">li</span><span class="puntuacion">.</span><span class="selector">special</span><span class="puntuacion">,</span>
+                        <span class="selector">span</span><span class="puntuacion">.</span><span class="selector">special</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">orange</span><span class="puntuacion">;</span>
+                            <span class="propiedad">font-weight</span><span class="puntuacion">:</span> bold<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Como puedes imaginar, algunas clases pueden aplicarse a muchos elementos y no queremos tener que
+                    seguir editando el CSS cada vez que algo nuevo necesita adoptar ese estilo. Por lo tanto, a veces es
+                    mejor eludir el elemento y simplemente referirse a la clase, a menos que sepas que vas a querer
+                    crear algunas reglas especiales para un solo elemento y tal vez quieras asegurarte de que no se
+                    apliquen a otros elementos.
+                </p>
+
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Dar_formato_según_la_ubicación_en_un_documento">
+            <header class="title__main">
+                <h2>Dar formato según la ubicación en un documento</h2>
+            </header>
+
+            <article>
+                <p>
+                    Hay momentos en los que querrás que algo se vea diferente en función de dónde esté en el documento.
+                    Hay múltiples selectores que pueden hacerlo, pero por ahora veremos solo un par. En nuestro
+                    documento hay dos elementos <span class="texto__destacado">&lt;em&gt;</span>: uno dentro de un
+                    párrafo y el otro dentro de un elemento de la lista. Para seleccionar solo un <span
+                        class="texto__destacado">&lt;em&gt;</span> que esté anidado dentro de un elemento <span
+                        class="texto__destacado">&lt;li&gt;</span>, podemos usar un selector llamado combinador
+                    descendente, que simplemente toma la forma de un espacio entre otros dos selectores.
+                </p>
+                <p>
+                    Añade la siguiente regla a la hoja de estilo.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">li em</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> rebeccapurple<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Este selector separará cualquier elemento <span class="texto__destacado">&lt;em&gt;</span> que esté
+                    dentro de (un descendiente de) <span class="texto__destacado">&lt;li&gt;</span>. Entonces, en tu
+                    documento de ejemplo, deberías encontrar que el <span class="texto__destacado">&lt;em&gt;</span> del
+                    tercer elemento de la lista es morado, pero el que hay en el párrafo no ha cambiado.
+                </p>
+                <p>
+                    Otra cosa que puedes probar es dar formato un párrafo que venga directamente a continuación de un
+                    título que esté en el mismo nivel de jerarquía en el HTML. Para hacerlo, coloca un <span
+                        class="texto__destacado">+</span> (un <strong>combinador hermano adyacente</strong>) entre los
+                    selectores.
+                </p>
+                <p>
+                    Intenta añadir también esta regla a la hoja de estilo:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1 + p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">font-size</span><span class="puntuacion">:</span>200%<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Dar_formato_según_el_estado">
+            <header class="title__main">
+                <h2>Dar formato según el estado</h2>
+            </header>
+
+            <article>
+                
+                <p>
+                    El último tipo de estilo que veremos en este tutorial es la capacidad de dar formato a los elementos en función de su estado. 
+                    Un ejemplo sencillo es el estilo de los enlaces. Cuando damos formato a un enlace, necesitamos seleccionar el elemento 
+                    <span class="texto__destacado">&lt;a&gt;</span> (anclaje). Tiene diferentes estados dependiendo de si se ha visitado o no, se 
+                    pasa por encima, o se presiona con el teclado o se hace clic (se activa). Puedes usar CSS para dar formato a estos diferentes 
+                    estados. El CSS que encontrarás a continuación presenta en color rosa los enlaces que no se han visitado y en verde los que sí.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">a:link</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">pink</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">a:visited</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">green</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Puedes cambiar la apariencia del enlace, por ejemplo, eliminando el subrayado, lo que se logra
+                    mediante la siguiente regla:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">a:hover</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">text-decoration</span><span class="puntuacion">:</span> none<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Hemos eliminado el subrayado del enlace cuando el ratón se pasa por encima, y se puede eliminar de
+                    todos los estados de un enlace. Sin embargo, vale la pena recordar que en una página web real
+                    deberás asegurarte de que los visitantes sepan reconocer que se trata de un enlace. Que aparezca
+                    subrayado puede ser una pista importante para que las personas se den cuenta de que pueden hacer
+                    clic en una palabra dentro del párrafo, ya que es a lo que están acostumbrados. Al igual que con
+                    todo en CSS, existe la posibilidad de que tus cambios resten accesibilidad al documento.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Combinaciones_de_selectores_y_combinadores">
+            <header class="title__main">
+                <h2>Combinaciones de selectores y combinadores</h2>
+            </header>
+
+            <article>
+                <p>
+                    Vale la pena señalar que puedes hacer múltiples combinaciones de selectores y combinadores. Por
+                    ejemplo:
+                </p>
+
+                <pre>
+                    <code>
+                        /* selecciona cualquier elemento &lt;span&lt; que se encuentre dentro de un &lt;p&gt;, que esté dentro de un &lt;article&gt; */
+                            <span class="selector">artículo p span</span> <span class="puntuacion">{ ... }</span>
+                            
+                        /* selecciona cualquier &lt;p&gt; que se encuentre directamente después de &lt;ul&gt;, que va directamente después de &lt;h1&gt; */
+                            <span class="selector">h1 + ul + p</span> <span class="puntuacion">{ ... }</span>
+                    </code>
+                </pre>
+
+                <p>
+                    También puedes combinar varios tipos juntos. Intenta añadir lo siguiente al código:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">body + h1 + p .especial</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">: </span>yellow<span class="puntuacion">;</span>
+                            <span class="propiedad">background-color</span><span class="puntuacion">: </span>black<span class="puntuacion">;</span>
+                            <span class="propiedad">padding</span><span class="puntuacion">: </span>5px<span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Dará formato a cualquier elemento con la clase special, dentro de un elemento <span
+                        class="texto__destacado">&lt;p&gt;</span> que venga
+                    justo después de <span class="texto__destacado">&lt;h1&gt;</span>, el cual se encuentra dentro de
+                    <span class="texto__destacado">&lt;body&gt;</span>. ¡Uf!
+                </p>
+                <p>
+                    No te preocupes si ahora mismo te parece complicado: irás acostumbrarte a medida que escribas más
+                    CSS.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Selectores">
+            <header class="title__main">
+                <h2>Selectores</h2>
+            </header>
+
+            <article>
+                <p>
+                    No se puede hablar de CSS sin mencionar los selectores. Un selector es, como determinamos, un
+                    elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican
+                    correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.
+                </p>
+                <p>
+                    Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a qué
+                    elemento o elementos deben aplicarse dichas reglas. Todos los siguientes son ejemplos de selectores
+                    válidos o listas de selectores.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">red</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p.prueba</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">green</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p.prueba.prueba2</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p:first-child</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">red</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p:last-child</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">green</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p:nth-child(2)</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Los selectores son una forma de identificar elementos en el documento HTML.
+                </p>
+                <p>
+                    <strong>Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin
+                        estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!</strong>
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Especificidad">
+            <header class="title__main">
+                <h2>Especificidad</h2>
+            </header>
+
+            <article>
+                <p>
+                    A menudo habrá situaciones en las que dos selectores podrían determinar un mismo elemento HTML.
+                    Considera la siguiente hoja de estilo, en que definimos una regla con un selector <span
+                        class="texto__destacado">p</span> que establecerá los párrafos en color azul, y también una
+                    clase que establecerá los elementos seleccionados en color rojo.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">.special</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">red</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Digamos que en nuestro documento HTML hay un párrafo con una clase <span
+                        class="texto__destacado">special</span>. Ambas reglas podrían aplicarse. ¿Cuál ganará? ¿De qué
+                    color crees que será nuestro párrafo?
+                </p>
+
+                <pre>
+                    <code class="language-html">
+                        <span class="selector">&lt;p class="special"&gt;</span>
+                            ¿De que color soy? 
+                        <span class="selector">&lt;/p&gt;</span>
+                    </code>
+                </pre>
+
+                <p>
+                    El lenguaje CSS tiene reglas para controlar cuál ganará en caso de colisión; reciben el nombre de
+                    <strong>cascada</strong> y <strong>especificidad</strong>. En el siguiente bloque de códigos hemos
+                    definido dos reglas para el selector <span class="texto__destacado">p</span>, pero el párrafo
+                    termina siendo de color azul. Esto se debe a que la declaración que lo establece en azul aparece más
+                    abajo en la hoja de estilo, y los estilos posteriores anulan a los anteriores. Así funciona la regla
+                    de la cascada.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">red</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">p</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Sin embargo, en el caso de nuestro primer bloque, que contiene un selector de clase y otro de
+                    elementos, la clase ganará. Esto hará que el párrafo sea rojo, incluso aunque aparezca antes en la
+                    hoja de estilo. Una clase se describe de forma más específica o con más especificidad que el
+                    selector de elementos, razón por la que gana.
+                </p>
+
+                <p>
+                    Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más
+                    fáciles de entender a medida que se van adquiriendo conocimientos de CSS. Por ahora, solo has de
+                    saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo
+                    tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un
+                    elemento es el primer paso para solucionar estos problemas.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Propiedades_y_valores">
+            <header class="title__main">
+                <h2>Propiedades y valores</h2>
+            </header>
+
+            <article>
+                <p>
+                    En su nivel más básico, el CSS consta de dos componentes básicos:
+
+                    <ul>
+                        <li>
+                            <strong>Propiedades</strong>
+                            <p>
+                                Identificadores legibles por los humanos que indican qué características de estilo (por
+                                ejemplo, font-size, width, background-color) deseas cambiar.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Valores</strong>
+                            <p>
+                                A cada propiedad especificada se le asigna un valor que indica cómo quieres que cambien
+                                esas características de estilo (por ejemplo, lo que quieres que cambie de la fuente, el
+                                ancho o el color de fondo).
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+
+                <p>
+                    La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es <span
+                        class="texto__destacado">color</span> y el valor <span class="texto__destacado">blue</span>.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <mark><span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span></mark>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Una propiedad emparejada con un valor se denomina <i>declaración</i> CSS. Las declaraciones CSS se
+                    colocan dentro de los <i>bloques de declaración</i> CSS. La siguiente imagen muestra nuestro CSS con
+                    el bloque de declaración resaltado.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <mark><span class="propiedad">color</span><span class="puntuacion">:</span> <span class="color">blue</span><span class="puntuacion">;</span></mark>
+                            <mark><span class="propiedad">background-color</span><span class="puntuacion">:</span> <span class="color">yellow</span><span class="puntuacion">;</span></mark>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje
+                    CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la
+                    compaginación y los estilos adecuados.
+                </p>
+
+                <p>
+                    <strong>Prueba a buscar diferentes valores de las siguientes propiedades y escribe reglas CSS que se
+                        puedan aplicar a diferentes elementos HTML:</strong>
+
+                    <ul>
+                        <li>font-size</li>
+                        <li>width</li>
+                        <li>background-color</li>
+                        <li>color</li>
+                        <li>border</li>
+                    </ul>
+                </p>
+
+
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Las_funciones">
+            <header class="title__main">
+                <h2>Las funciones</h2>
+            </header>
+
+            <article>
+                <p>
+                    Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es
+                    posible que algunos valores tomen la forma de una función. Un ejemplo sería la función <span
+                        class="texto__destacado">calc()</span>. Esta función te permite hacer operaciones matemáticas
+                    sencillas desde tu CSS, por ejemplo:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">font-size</span><span class="puntuacion">:</span> <span class="funcion">calc</span><span class="puntuacion">(</span><span class="valor">100</span><span class="puntuacion">%</span><span class="operador">-</span><span class="valor">20</span><span class="puntuacion">)</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se
+                    colocan los valores permitidos para esa función.
+                </p>
+                <p>
+                    Otro ejemplo serían los diversos valores para transform, como rotate().
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">h1</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">transform</span><span class="puntuacion">:</span> <span class="funcion">rotate</span><span class="puntuacion">(</span><span class="valor">45deg</span><span class="puntuacion">)</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+                    </code>                    
+                </pre>
+
+                <p>
+                    <strong>Prueba a buscar diferentes valores de las siguientes funciones y escribe reglas CSS que se
+                        puedan aplicar a diferentes elementos HTML:</strong>
+
+                    <ul>
+                        <li>rotate()</li>
+                        <li>scale()</li>
+                        <li>skew()</li>
+                        <li>translate()</li>
+                    </ul>
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="@rules">
+            <header class="title__main">
+                <h2>@rules</h2>
+            </header>
+
+            <article>
+                <p>
+                    Las <span class="texto__destacado">@rules</span> (leído "at-rules" en inglés) dan al CSS algunas
+                    instrucciones sobre cómo comportarse. Algunas @rules son simples, con el nombre de la regla y un
+                    valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal,
+                    puedes usar <span class="texto__destacado">@import</span>:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">@import</span> <span class="puntuacion">'</span><span class="valor">styles2.css</span><span class="puntuacion">'</span>;
+                    </code>
+                </pre>
+
+                <p>
+                    Una de las <span class="texto__destacado">@rules</span> más comunes con las que te encontrarás es
+                    <span class="texto__destacado">@media</span>, que permite usar consultas a medios para aplicar CSS
+                    solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un
+                    valor determinado o la anchura supera un valor concreto).
+                </p>
+
+                <p>
+                    En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento <span
+                        class="texto__destacado">&lt;body&gt;</span> un color de fondo rosado. Sin embargo, luego usamos
+                    <span class="texto__destacado">@media</span> para crear una sección de nuestra hoja de estilo que
+                    solo se aplicará en los navegadores con una ventana gráfica de más de <span
+                        class="texto__destacado">30em</span> de ancho. Si el navegador es más ancho que <span
+                        class="texto__destacado">30em</span>, el color de fondo será azul.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="selector">body</span> <span class="puntuacion">{</span>
+                            <span class="propiedad">background-color</span><span class="puntuacion">:</span> <span class="valor">pink</span><span class="puntuacion">;</span>
+                        <span class="puntuacion">}</span>
+
+                        <span class="selector">@media</span> <span class="puntuacion">(</span><span class="valor">min-width</span><span class="puntuacion">:</span> <span class="valor">30em</span><span class="puntuacion">)</span> <span class="puntuacion">{</span>
+                            <span class="selector">body</span> <span class="puntuacion">{</span>
+                                <span class="propiedad">background-color</span><span class="puntuacion">:</span> <span class="valor">blue</span><span class="puntuacion">;</span>
+                            <span class="puntuacion">}</span>
+                        <span class="puntuacion">}</span>
+                    </code>
+                </pre>
+
+                <p>
+                    <strong>Prueba a añadir una consulta a medios en tu CSS que cambie los estilos según el ancho de la
+                        ventana gráfica. Cambia el ancho de la ventana de tu navegador para ver el resultado.</strong>
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Abreviaturas">
+            <header class="title__main">
+                <h2>Abreviaturas</h2>
+            </header>
+
+            <article>
+                <p>
+                    Algunas propiedades como <span class="texto__destacado"></span>font, <span
+                        class="texto__destacado">background</span>, <span class="texto__destacado">padding</span>, <span
+                        class="texto__destacado">border</span> y <span class="texto__destacado">margin</span> se llaman
+                    <strong>propiedades abreviadas</strong>. Esto se debe a que permiten establecer varios valores de
+                    propiedad en una sola línea, lo que ahorra tiempo y ordena el código.
+                </p>
+
+                <p>
+                    Por ejemplo, esta línea:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        /* En propiedades abreviadas con 4 valores, como margin y padding (relleno), los valores se aplican
+                           según el orden: arriba, derecha, abajo e izquierda (en sentido horario desde la parte superior). También hay otros
+                           tipos de abreviaturas, como las propiedades abreviadas con 2 valores que establecen el relleno/margen,
+                           arriba/abajo, y luego izquierda/derecha */
+                        
+                        <span class="propiedad">padding</span><span class="puntuacion">:</span> <span class="valor">10px 15px 15px 5px</span><span class="puntuacion">;</span>                        
+                    </code>
+                </pre>
+
+                <p>
+                    Hace lo mismo que todas estas juntas:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="propiedad">padding-top</span><span class="puntuacion">:</span> <span class="valor">10px</span><span class="puntuacion">;</span>
+                        <span class="propiedad">padding-right</span><span class="puntuacion">:</span> <span class="valor">15px</span><span class="puntuacion">;</span>
+                        <span class="propiedad">padding-bottom</span><span class="puntuacion">:</span> <span class="valor">15px</span><span class="puntuacion">;</span>
+                        <span class="propiedad">padding-left</span><span class="puntuacion">:</span> <span class="valor">5px</span><span class="puntuacion">;</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Mientras que esta línea:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="propiedad">background</span><span class="puntuacion">:</span> <span class="valor">red <span class="propiedad">url</span>(bg-graphic.png) 10px 10px repeat-x fixed</span><span class="puntuacion">;</span>
+                    </code>
+                </pre>
+
+                <p>
+                    Hace lo mismo que todas estas juntas:
+                </p>
+
+                <pre>
+                    <code class="language-css">
+                        <span class="propiedad">background-color</span><span class="puntuacion">:</span> <span class="valor">red</span><span class="puntuacion">;</span>
+                        <span class="propiedad">background-image</span><span class="puntuacion">:</span> <span class="propiedad">url</span><span class="valor"><span class="puntuacion">(</span>bg-graphic.png<span class="puntuacion">)</span></span><span class="puntuacion">;</span>
+                        <span class="propiedad">background-position</span><span class="puntuacion">:</span> <span class="valor">10px 10px</span><span class="puntuacion">;</span>
+                        <span class="propiedad">background-repeat</span><span class="puntuacion">:</span> <span class="valor">repeat-x</span><span class="puntuacion">;</span>
+                        <span class="propiedad">background-scroll</span><span class="puntuacion">:</span> <span class="valor">fixed</span><span class="puntuacion">;</span>
+                    </code>
+                </pre>
+
+                <p>
+                    <strong>Prueba a añadir las declaraciones anteriores a tu CSS para ver cómo afecta al estilo de tu
+                        HTML. Experimenta con diferentes valores.</strong>
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Referencia">
+            <header class="title__main">
+                <h2>Referencia</h2>
+            </header>
+
+            <article>
+                <p>
+                    Toda la documentación de esta página está tomada de <a
+                        href="https://developer.mozilla.org/es/docs/Learn/CSS/First_steps" target="_blank">MDN</a>, el
+                    sitio web oficial de Mozilla para la documentación de estándares web y de los proyectos de Mozilla.​
+                </p>
+            </article>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

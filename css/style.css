@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+
+.nav__bar {
+    position: fixed;
+    min-width: 290px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    /* border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4); */
+}
+
+.title__documentation>h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: .5rem 1rem;
+}
+
+.nav__item {
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+.nav__item>a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+}
+
+.nav__item>a:hover {
+    background-color: #f5f7f7;
+    padding: .7rem;
+}
+
+
+
+/* Main */
+
+.main__doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 2rem;
+    margin-bottom: 11rem;
+    max-width: 100%;
+}
+
+.title__main>h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+article {
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 1rem 0 2rem;
+    text-align: justify;
+}
+
+pre>code {
+    display: block;
+    position: relative;
+    background-color: #f2f1f1;
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    line-height: 2;
+    white-space: pre-wrap;
+    word-break: normal;
+    word-wrap: normal;
+    /* padding: 0 21rem 3rem; */
+}
+
+.selector {
+    color: #872bff;
+}
+
+.propiedad {
+    color: #d30038;
+}
+
+.puntuacion {
+    color: #9e9e9e;
+}
+
+.texto__destacado {
+    background-color: #f5f7f7;
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+li {
+    margin: 0 0 0 5rem;
+    padding: 0 1rem;
+}
+
+mark {
+    background-color: #bab5f2;
+}
+
+@media(max-width: 1110px) {
+    pre>code {        
+        white-space: pre-line;
+        padding: 0 10rem 3rem; 
+    }
+}
+
+@media(max-width: 810px) {
+    .nav__bar{
+        display: none;
+    }
+    .main__doc{
+        margin-left: 0;
+        max-width: 100%;
+    }
+    pre>code {        
+        white-space: pre-line;                              
+        padding: 0;
+    }
+}
